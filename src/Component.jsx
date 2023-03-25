@@ -29,7 +29,8 @@ const Component = ({ data, components, path }) => {
       style={{ ...style, opacity }}
       className="component draggable"
     >
-      <div>{component.content}</div>
+      {component.content ? <div>{component.content}</div> : <div></div>}
+      
     </div>
   );
 };

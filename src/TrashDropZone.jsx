@@ -2,6 +2,8 @@ import React from "react";
 import classNames from "classnames";
 import { useDrop } from "react-dnd";
 import { COMPONENT, ROW, COLUMN } from "./constants";
+import { Box, Button } from "@mui/material";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 const ACCEPTS = [ROW, COLUMN, COMPONENT];
 
@@ -38,12 +40,17 @@ const TrashDropZone = ({ data, onDrop }) => {
 
   const isActive = isOver && canDrop;
   return (
-    <div
-      className={classNames("trashDropZone", { active: isActive })}
+    <Button
+    variant="contained"
+      className={classNames({ active: isActive })}
       ref={drop}
+      style={{
+        borderRadius: "50px",
+        width: "50px"
+      }}
     >
-      TRASH
-    </div>
+      <DeleteOutlineIcon/>
+    </Button>
   );
 };
 export default TrashDropZone;
