@@ -1,0 +1,6 @@
+
+    </div>
+  )
+};
+
+export default Teaxtarea; 
