@@ -1,15 +1,13 @@
 {
-  "name": "dustbin-proto-dnd-reordering-nested-column-to-diff-parent-forked-modified",
-  "main": "src/index.js",
-  "description": "",
-  "private": true,
-  "version": "0.0.0",
+  "name": "htt",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -18,23 +16,24 @@
     "@mui/base": "^5.0.0-alpha.122",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.14",
-    "classnames": "2.2.6",
+    "child_process": "^1.0.2",
+    "classnames": "^2.3.2",
+    "express": "^4.18.2",
     "firebase": "^9.18.0",
-    "immutability-helper": "^3.0.0",
-    "lodash": "4.17.15",
+    "firebase-admin": "^11.5.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.1",
+    "immutability-helper": "^3.1.1",
+    "lodash": "^4.17.21",
+    "next": "^13.2.4",
+    "path": "^0.12.7",
     "react": "^18.2.0",
-    "react-dnd": "10.0.2",
-    "react-dnd-html5-backend": "10.0.2",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18.2.0",
-    "react-frame-component": "^4.1.0",
-    "react-scripts": "2.1.8",
-    "shortid": "2.2.15"
+    "react-frame-component": "^5.2.6",
+    "react-scripts": "^5.0.1",
+    "shortid": "^2.2.16"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "keywords": []
+  "description": ""
 }

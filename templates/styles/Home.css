@@ -1,0 +1,157 @@
+@media only screen and (max-width: 500px) {
+  .tournament-name-container {
+    color: white;
+    background: linear-gradient(
+        159.16deg,
+        #f8c156 28.52%,
+        rgba(245, 191, 85, 0.297195) 64.89%,
+        rgba(244, 190, 85, 0) 88.82%
+      ),
+      linear-gradient(
+        74.49deg,
+        #fb63be -21.56%,
+        rgba(253, 97, 191, 0.288542) 19.39%,
+        rgba(254, 97, 191, 0) 46.79%
+      );
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .tournament-name-container {
+    color: white;
+    width: 100%;
+    background: linear-gradient(
+        97.03deg,
+        #f8c156 15.01%,
+        rgba(245, 191, 85, 0.297195) 59.28%,
+        rgba(244, 190, 85, 0) 88.39%
+      ),
+      linear-gradient(
+        39.33deg,
+        #fb63be -24.72%,
+        rgba(253, 97, 191, 0.288542) 8.51%,
+        rgba(254, 97, 191, 0) 46.14%
+      );
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tournament-name {
+    /* font-family: "Montserrat"; */
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 78px;
+    /* identical to box height */
+
+    color: #fffdfa;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .tournament-name {
+    /* font-family: "Montserrat"; */
+    font-style: normal;
+    font-weight: 900;
+    font-size: 92px;
+    line-height: 125.29px;
+    /* identical to box height */
+
+    color: #fffdfa;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .tournament-name {
+    /* font-family: "Montserrat"; */
+    font-style: normal;
+    font-weight: 900;
+    font-size: 132px;
+    line-height: 165.29px;
+    /* identical to box height */
+
+    color: #fffdfa;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tournament-name-fullform {
+    /* font-family: "Montserrat"; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #fffdfa;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .tournament-name-fullform {
+    /* font-family: "Montserrat"; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39.01px;
+
+    color: #fffdfa;
+  }
+}
+
+.days-counter {
+  background: #fffdfa;
+  box-shadow: 0px 4px 16px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.mmnct-about {
+  background: linear-gradient(
+    177.16deg,
+    #f8c156 -20.93%,
+    rgba(245, 191, 85, 0.297195) 31.28%,
+    rgba(244, 190, 85, 0) 65.61%
+  );
+  padding: 20px 9px;
+  /* margin: 20px 0px; */
+}
+
+.contest-image {
+  position: absolute;
+  width: 440px;
+  height: 455px;
+  right: -140px;
+  bottom: 0px;
+  /* z-index: 4; */
+}
+
+.left-icon {
+  font-weight: 700;
+}
+
+.contest-title {
+  font-weight: 900;
+}
+
+.container--no-matches {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/mmnct-fac3f.appspot.com/o/pics%2Falessandro-bogliari-oDs_AxeR5g4-unsplash.jpg?alt=media&token=40188989-d39f-4ebd-a693-e48e5729ac8c");
+  /* color: white; */
+  background-position: right bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.team-container {
+  background: linear-gradient(
+    265.42deg,
+    #272caa -43.02%,
+    rgba(39, 44, 170, 0) 98.25%
+  );
+  /* transform: rotate(-90deg); */
+}
+
+.memory-tree {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/mmnct-fac3f.appspot.com/o/pics%2Fvicky-adams-gywHscPZwMM-unsplash.jpg?alt=media&token=48df483f-82a0-42cf-8ec4-406060ec1758");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
