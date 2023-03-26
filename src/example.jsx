@@ -16,7 +16,9 @@ import { Paper } from "@mui/material";
 import { SIDEBAR_ITEMS, SIDEBAR_ITEM, COMPONENT, COLUMN } from "./constants";
 import shortid from "shortid";
 
+
 const Container = () => {
+
   const initialLayout = initialData.layout;
   const initialComponents = initialData.components;
   const [layout, setLayout] = useState(initialLayout);
@@ -58,6 +60,7 @@ const Container = () => {
           ...components,
           [newComponent.id]: newComponent,
         });
+        console.log(components, "up")
         setLayout(
           handleMoveSidebarComponentIntoParent(
             layout,
@@ -107,7 +110,7 @@ const Container = () => {
     },
     [layout, components]
   );
-
+console.log(layout, components)
   const renderRow = (row, currentPath) => {
     return (
       <Row
@@ -120,8 +123,6 @@ const Container = () => {
     );
   };
 
-  // dont use index for key when mapping over items
-  // causes this issue - https://github.com/react-dnd/react-dnd/issues/342
   return (
     <div className="body">
       <div className="sideBar">
@@ -130,16 +131,19 @@ const Container = () => {
         ))}
       </div>
       <div className="pageContainer">
-        <Paper elevation={4} style={{
-          width: "95%",
-          alignSelf: "center",
-          height: "95%",
-          padding: "0 20px",
-          margin: "20px"
-        }}>
+        <Paper
+          elevation={4}
+          style={{
+            width: "95%",
+            alignSelf: "center",
+            height: "95%",
+            padding: "0 20px",
+            margin: "20px",
+          }}
+        >
           {layout.map((row, index) => {
             const currentPath = `${index}`;
-
+            console.log(currentPath, 1)
             return (
               <React.Fragment key={row.id}>
                 <DropZone

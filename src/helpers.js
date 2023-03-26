@@ -49,7 +49,6 @@ export const reorderChildren = (children, splitDropZonePath, splitItemPath) => {
       splitItemChildrenPath
     )
   };
-
   return updatedChildren;
 };
 

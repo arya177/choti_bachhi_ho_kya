@@ -16,19 +16,20 @@ const DropZone = ({ data, onDrop, isLast, className }) => {
       const splitDropZonePath = dropZonePath.split("-");
       const itemPath = item.path;
 
-      // sidebar items can always be dropped anywhere
       if (!itemPath) {
         // if (data.childrenCount >= 3) {
         //  return false;
         // }
+        console.log('here')
         return true;
       }
-
+      
       const splitItemPath = itemPath.split("-");
 
       // limit columns when dragging from one row to another row
-      const dropZonePathRowIndex = splitDropZonePath[0];
-      const itemPathRowIndex = splitItemPath[0];
+      const dropZonePathRowIndex = splitDropZonePath[0];//null first call
+      const itemPathRowIndex = splitItemPath[0]; //nan first call
+      // console.log(dropZonePathRowIndex, itemPathRowIndex)
       const diffRow = dropZonePathRowIndex !== itemPathRowIndex;
       if (
         diffRow &&
