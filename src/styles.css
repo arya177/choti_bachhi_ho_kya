@@ -21,7 +21,14 @@ body {
   width: 217px;
   padding: 10px;
 }
-
+.multiple{
+  display: flex;
+  flex-direction: column;
+}
+.btn1{
+  color: black;
+  border-color: black;
+}
 .page {
   flex: 1 1 auto;
   padding: 0 20px;

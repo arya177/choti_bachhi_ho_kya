@@ -27,6 +27,7 @@ const Container = () => {
   const initialComponents = initialData.components;
   const [layout, setLayout] = useState(initialLayout);
   const [components, setComponents] = useState(initialComponents);
+ 
 
   const handleDropToTrashBin = useCallback(
     (dropZone, item) => {
@@ -138,7 +139,7 @@ const Container = () => {
           id : components[item].id,
           type : components[item].type
         };
-        obj = {item: tempObj}
+        obj[item] = tempObj
   })
      
       await addData(obj)
@@ -163,7 +164,7 @@ const Container = () => {
         // const docRef = await addDoc(collection(db, "layout"), {
         //   layout: layout,    
         // })
-        // console.log("Document written with ID: ", docRef.id);
+        // // console.log("Document written with ID: ", docRef.id);
         await setDoc(doc(db, "layout", "hacktank"), {layout});
 
         }
@@ -180,7 +181,13 @@ const Container = () => {
   }
   return (
     <div className="body">
+      
       <div className="sidePane">
+      <div className="multiple">
+      <Button variant="outlined" className="btn1">HomePage</Button>
+      <Button variant="outlined" className="btn1">Blogs</Button>
+      <Button variant="outlined" className="btn1">About</Button>
+      </div>
       <div className="sideBar">
         {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
           <SideBarItem key={sideBarItem.id} data={sideBarItem} />
