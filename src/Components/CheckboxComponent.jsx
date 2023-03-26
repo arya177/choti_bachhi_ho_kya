@@ -7,7 +7,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
 
-export default function CheckboxComponent() {
+export default function NavigationBar() {
   const [state, setState] = React.useState({
     gilad: true,
     jason: false,

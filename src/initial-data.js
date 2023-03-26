@@ -2,7 +2,7 @@ import React from "react";
 import { COMPONENT, ROW, COLUMN } from "./constants";
 import Button from "@mui/material/Button";
 import { Box } from "@mui/system";
-import CheckboxComponent from "./Components/CheckboxComponent";
+import NavigationBar from "./Components/CheckboxComponent";
 import ResponsiveAppBar from "./Components/ResponsiveAppBar";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 

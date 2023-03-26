@@ -14,10 +14,21 @@ body {
   width: 200px;
   padding: 10px;
   /* border-right: 1px solid #111; */
-  height: 100vh;
+  height: 90vh;
   background: #e1e1e1;
 }
-
+.btn{
+  width: 217px;
+  padding: 10px;
+}
+.multiple{
+  display: flex;
+  flex-direction: column;
+}
+.btn1{
+  color: black;
+  border-color: black;
+}
 .page {
   flex: 1 1 auto;
   padding: 0 20px;

@@ -49,6 +49,7 @@ export const reorderChildren = (children, splitDropZonePath, splitItemPath) => {
       splitItemChildrenPath
     )
   };
+  // console.log(updatedChildren);
   return updatedChildren;
 };
 
@@ -184,7 +185,7 @@ export const handleMoveToDifferentParent = (
     splitDropZonePath,
     newLayoutStructure
   );
-
+  console.log("upd", updatedLayout);
   return updatedLayout;
 };
 
