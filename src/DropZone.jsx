@@ -26,7 +26,6 @@ const DropZone = ({ data, onDrop, isLast, className }) => {
       
       const splitItemPath = itemPath.split("-");
 
-      // limit columns when dragging from one row to another row
       const dropZonePathRowIndex = splitDropZonePath[0];//null first call
       const itemPathRowIndex = splitItemPath[0]; //nan first call
       // console.log(dropZonePathRowIndex, itemPathRowIndex)
@@ -39,14 +38,11 @@ const DropZone = ({ data, onDrop, isLast, className }) => {
         return false;
       }
 
-      // Invalid (Can't drop a parent element (row) into a child (column))
       const parentDropInChild = splitItemPath.length < splitDropZonePath.length;
       if (parentDropInChild) return false;
 
-      // Current item can't possible move to it's own location
       if (itemPath === dropZonePath) return false;
 
-      // Current area
       if (splitItemPath.length === splitDropZonePath.length) {
         const pathToItem = splitItemPath.slice(0, -1).join("-");
         const currentItemIndex = Number(splitItemPath.slice(-1)[0]);
