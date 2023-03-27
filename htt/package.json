@@ -1,0 +1,39 @@
+{
+  "name": "htt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/base": "^5.0.0-alpha.122",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.14",
+    "child_process": "^1.0.2",
+    "classnames": "^2.3.2",
+    "express": "^4.18.2",
+    "firebase": "^9.18.0",
+    "firebase-admin": "^11.5.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.1",
+    "immutability-helper": "^3.1.1",
+    "lodash": "^4.17.21",
+    "next": "^13.2.4",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "react-frame-component": "^5.2.6",
+    "react-scripts": "^5.0.1",
+    "shortid": "^2.2.16"
+  },
+  "description": ""
+}

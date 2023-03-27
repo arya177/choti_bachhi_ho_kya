@@ -1,8 +1,8 @@
 import shortid from "shortid";
 import React from "react";
 import { Button, Box } from "@mui/material";
-import NavigationBar from "./Components/CheckboxComponent";
-import ResponsiveAppBar from "./Components/ResponsiveAppBar";
+import CheckboxComponent from "./Components/CheckboxComponent";
+import Navbar from "./Components/Navbar";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import image from "../src/Images/Default_Image.jpg"
 
@@ -25,7 +25,7 @@ export const SIDEBAR_ITEMS = [
     type: SIDEBAR_ITEM,
     component: {
       type: "Checkbox",
-      content: <NavigationBar />,
+      content: <CheckboxComponent />,
     },
   },
   {
@@ -41,7 +41,7 @@ export const SIDEBAR_ITEMS = [
     type: SIDEBAR_ITEM,
     component: {
       type: "Navbar",
-      content: <ResponsiveAppBar />,
+      content: <Navbar />,
     },
   },
   {
@@ -53,3 +53,4 @@ export const SIDEBAR_ITEMS = [
     },
   },
 ];
+

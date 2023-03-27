@@ -23,10 +23,12 @@ let final_layout=[];
 let final_component={};
 
 const Container = () => {
+
   const initialLayout = initialData.layout;
   const initialComponents = initialData.components;
   const [layout, setLayout] = useState(initialLayout);
   const [components, setComponents] = useState(initialComponents);
+ 
 
   const handleDropToTrashBin = useCallback(
     (dropZone, item) => {
@@ -65,6 +67,7 @@ const Container = () => {
           ...components,
           [newComponent.id]: newComponent,
         });
+        console.log(components, "up")
         setLayout(
           handleMoveSidebarComponentIntoParent(
             layout,
@@ -114,7 +117,7 @@ const Container = () => {
     },
     [layout, components]
   );
-
+console.log(layout, components)
   const renderRow = (row, currentPath) => {
     return (
       <Row
@@ -138,7 +141,7 @@ const Container = () => {
           id : components[item].id,
           type : components[item].type
         };
-        obj = {item: tempObj}
+        obj[item] = tempObj
   })
      
       await addData(obj)
@@ -163,7 +166,7 @@ const Container = () => {
         // const docRef = await addDoc(collection(db, "layout"), {
         //   layout: layout,    
         // })
-        // console.log("Document written with ID: ", docRef.id);
+        // // console.log("Document written with ID: ", docRef.id);
         await setDoc(doc(db, "layout", "hacktank"), {layout});
 
         }
@@ -178,28 +181,64 @@ const Container = () => {
         console.error("Error adding document: ", e);
       }
   }
+
+
+  //handlle change page function
+  const handleChangePage = () => {
+    handleSave()
+    setLayout(initialLayout)
+    setComponents(initialComponents)
+  }
+
   return (
     <div className="body">
       <div className="sidePane">
-      <div className="sideBar">
-        {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
-          <SideBarItem key={sideBarItem.id} data={sideBarItem} />
-        ))}
+        <div className="multiple">
+          <Button
+            variant="outlined"
+            className="btn1"
+            onClick={handleChangePage}
+          >
+            HomePage
+          </Button>
+          <Button
+            variant="outlined"
+            className="btn1"
+            onClick={handleChangePage}
+          >
+            Blogs
+          </Button>
+          <Button
+            variant="outlined"
+            className="btn1"
+            onClick={handleChangePage}
+          >
+            About
+          </Button>
+        </div>
+        <div className="sideBar">
+          {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
+            <SideBarItem key={sideBarItem.id} data={sideBarItem} />
+          ))}
+        </div>
+        <Button variant="contained" className="btn" onClick={handleSave}>
+          Save
+        </Button>
       </div>
-      <Button variant="contained" className="btn" onClick={handleSave}>Save</Button>
-      </div>
-
       <div className="pageContainer">
-        <Paper elevation={4} style={{
-          width: "95%",
-          alignSelf: "center",
-          height: "95%",
-          padding: "0 20px",
-          margin: "20px"
-        }}>
+        <Paper
+          elevation={4}
+          style={{
+            width: "95%",
+            alignSelf: "center",
+            height: "95%",
+            padding: "0 20px",
+            margin: "20px",
+          }}
+        >
           {layout.map((row, index) => {
             const currentPath = `${index}`;
-
+            console.log(currentPath, 1);
             return (
               <React.Fragment key={row.id}>
                 <DropZone
